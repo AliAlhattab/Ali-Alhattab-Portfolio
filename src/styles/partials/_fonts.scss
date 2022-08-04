@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('../../assets/fonts/Oswald-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('../../assets/fonts/Oswald-Light.ttf');
+    font-weight: 300;
+}
+
+//mobile font mixins
+@mixin mobile__page-header {
+    font-family: "Oswald";
+    font-size: 1.75rem; //28px
+    line-height: 2.25rem; //36px
+  }
+  
+  @mixin mobile__sub-header {
+    font-family: "Oswald";
+    font-size: 1.25rem; //20px
+    line-height: 1.75rem; //28px
+  }
+  
+  @mixin mobile__labels-links-buttons {
+    font-family: "Oswald";
+    font-size: 0.81rem; //13px
+    line-height: 1.25rem; //20px
+  }
+  
+  @mixin mobile__table-header {
+    font-family: "Oswald";
+    font-size: 0.69rem; //11px
+    line-height: 1rem; //16px
+  }
+  
+  @mixin mobile__body-large {
+    font-family: "Oswald";
+    font-size: 0.94rem; //15px
+    line-height: 1.63rem; //26px
+  }
+  
+  @mixin mobile__body-medium {
+    font-family: "Oswald";
+    font-size: 0.81rem; //13px
+    line-height: 1.25rem; //20px
+  }
+  
+  @mixin mobile__body-small {
+    font-family: "Oswald";
+    font-size: 0.69rem; //11px
+    line-height: 1rem; //16px
+  }

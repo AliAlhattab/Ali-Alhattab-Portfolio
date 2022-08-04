@@ -1,0 +1,72 @@
+@use '../styles/partials/mixins' as *;
+@use '../styles/partials/fonts' as *;
+@use '../styles/partials/variables' as *;
+
+.nav{
+    display: flex;
+    align-items: center;
+    background-image: url('../assets/images/Nav.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+    &__image{
+        background-image: url('../assets/images/pfp.PNG');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+        margin: 0rem 0.5rem 0 0.5rem;
+        border: solid white 1px;
+        
+    }
+
+    &__group{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+
+    }
+
+    &__title{
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__name{
+        margin-right: 0.3rem;
+        @include mobile__sub-header;
+        color: white
+       
+    }
+
+    &__subtitle{
+        @include mobile__table-header;
+        font-weight: 300;
+        color: white
+    }
+
+    &__links{
+       
+    }
+    
+    &__menu{
+        width: 1.5rem;
+        margin-right: 0.5rem;
+       filter: invert(1);
+        
+        
+    }
+
+    &__list{
+        list-style: none;
+        display: none;
+    }
+
+    &__option{
+
+    }
+}
