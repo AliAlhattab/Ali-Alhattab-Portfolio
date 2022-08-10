@@ -1,17 +1,17 @@
-@use '../styles/partials/mixins' as *;
-@use '../styles/partials/fonts' as *;
-@use '../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
 
 .nav{
     display: flex;
     align-items: center;
-    background-image: url('../assets/images/Nav.png');
+    background-image: url('../../assets/images/Nav.png');
     background-size: cover;
     background-repeat: no-repeat;
     
 
     &__image{
-        background-image: url('../assets/images/pfp.PNG');
+        background-image: url('../../assets/images/pfp.PNG');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -19,7 +19,17 @@
         width: 2.25rem;
         height: 2.25rem;
         margin: 0rem 0.5rem 0 0.5rem;
-        border: solid white 1px;
+        border: solid $primary-textColor 1px;
+
+        @include tablet{
+            margin: 0rem 1rem 0 1rem;
+            width: 2.75rem;
+            height: 2.75rem;
+        }
+
+        @include desktop {
+            margin: 0rem 1rem 0 2rem;
+        }
         
     }
 
@@ -39,14 +49,23 @@
     &__name{
         margin-right: 0.3rem;
         @include mobile__sub-header;
-        color: white
+        color: $primary-textColor;
+
+        @include tablet{
+            @include tablet__sub-header;
+            margin-right: 0.5rem;
+        }
        
     }
 
     &__subtitle{
         @include mobile__table-header;
         font-weight: 300;
-        color: white
+        color: $primary-textColor;
+
+        @include tablet{
+            @include tablet__table-header;
+        }
     }
 
     &__links{
@@ -68,14 +87,14 @@
 
     &__list{
         list-style: none;
-        color: white;
+        color: $primary-textColor;
         display: flex;
         flex-direction: column;
         position: absolute;
         right: 0px;
         top:68px;
         width: 100%;
-        background-color: #181818;
+        background-color: rgba(24, 24, 24, 0.8);
         margin: 0;
         
 
@@ -84,12 +103,17 @@
             top: auto;
             right: auto;
             position: relative;
-            background-color: transparent
+            background-color: transparent;
+            margin: 0rem 0.5rem 0 0;
+        }
+
+        @include desktop {
+            margin: 0rem 2rem 0 0;
         }
     }
 
     &__option{
-        @include mobile__labels-links-buttons;
+        @include tablet__labels-links-buttons;
         margin: 0 1rem;
         padding: 0.5rem 0 ;
         

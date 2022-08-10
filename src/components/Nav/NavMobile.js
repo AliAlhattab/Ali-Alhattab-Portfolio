@@ -1,7 +1,7 @@
 import React from "react";
 import "./Nav.scss";
 import NavLinks from "./NavLinks";
-import menu from "../assets/images/Hamburger_icon.svg.png";
+import menu from "../../assets/images/Hamburger_icon.svg.png";
 import { useState } from "react";
 
 function NavMobile() {
