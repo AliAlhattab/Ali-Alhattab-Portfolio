@@ -4,9 +4,10 @@
 
 .header{
 display: flex;
-background-color: rgb(117, 117, 117);
+background-color: rgb(65, 65, 65);
 width: 100%;
 padding-top: 68px;
+
 
 
 
@@ -14,17 +15,29 @@ padding-top: 68px;
         color: white;
         padding: 2rem;
         width: 50%;
+
+        @include tablet{
+            padding: 4rem
+        }
         
     }
 
     &__subtext{
         @include mobile__body-large;
         margin: 0;
+
+        @include tablet{
+            @include tablet__body-large;
+        }
     }
 
     &__text{
         @include mobile__page-header;
         width: 100px;
+
+        @include tablet{
+            @include tablet__page-header;
+        }
     }
 
     &__image{
@@ -34,5 +47,12 @@ padding-top: 68px;
         background-position:top;
         height: 20rem;
         width: 100%;
+
+        @include tablet{
+            height: 25rem;
+            background-size: cover;
+            width: 32rem;
+            
+        }
     }
 }

@@ -11,15 +11,6 @@ function NavLinks(props) {
       <motion.li
         initial={animateForm}
         animate={animateTo}
-        transition={{ delay: 0.05 }}
-        className="nav__option"
-        onClick={() => props.isMobile && props.closeMenu()}
-      >
-        Home
-      </motion.li>
-      <motion.li
-        initial={animateForm}
-        animate={animateTo}
         transition={{ delay: 0.1 }}
         className="nav__option"
         onClick={() => props.isMobile && props.closeMenu()}
