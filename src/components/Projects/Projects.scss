@@ -4,11 +4,6 @@
 
 .projects{
 
-    background-image: url(../../assets/images/cornered-stairs.svg);    
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
     &__title{
         @include mobile__page-header;
         padding-top: 1rem;
