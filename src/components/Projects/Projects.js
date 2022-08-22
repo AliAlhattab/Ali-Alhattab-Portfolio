@@ -21,7 +21,10 @@ function Projects({slides}) {
     }
 
     return (
-    <section className='projects'>
+        <section className='projects'>
+            <h1 className='projects__title'>Projects</h1>
+    <div className='projects__container'>
+        
         <FaArrowAltCircleLeft className='projects__left-arrow' onClick={prevSlide}/>
         <FaArrowAltCircleRight className='projects__right-arrow' onClick={nextSlide}/>
         {SliderData.map((slide, index) => {
@@ -34,6 +37,7 @@ function Projects({slides}) {
                 )
                 
         })}
+    </div>
     </section>
   )
 }

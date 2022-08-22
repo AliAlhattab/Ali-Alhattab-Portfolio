@@ -64,5 +64,15 @@ padding-top: 68px;
         
         @include mobile__labels-links-buttons;
 
+        @include tablet{
+            @include tablet__labels-links-buttons;
+
+            margin: 1rem;
+        border-radius: 8px;
+        border: none;
+        padding: 0.6rem 2rem;
+
+        }
+
     }
 }
