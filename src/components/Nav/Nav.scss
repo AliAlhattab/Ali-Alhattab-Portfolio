@@ -71,8 +71,8 @@
         }
     }
 
-    &__links{
-       
+    &__link{
+        text-decoration: none;
     }
     
     &__menu{
@@ -99,6 +99,7 @@
         width: 100%;
         background-color: rgba(24, 24, 24, 0.8);
         margin: 0;
+        text-decoration: none;
         
 
         @include tablet {
@@ -120,6 +121,9 @@
         margin: 0 1rem;
         padding: 1rem 0 ;
         cursor: pointer;
+        color: white;
+        text-decoration: none;
+
 
         &:hover{
             color: grey;

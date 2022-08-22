@@ -3,7 +3,7 @@ import './About.scss'
 
 function About() {
   return (
-    <section className='about'>
+    <section id="about" className='about'>
             <h1 className='about__title'>About me</h1>
             <p className='about__text'>I am a Brainstation Full Stack Developer graduate that is never finished expanding their knowledge about software development.
 Starting out at a young age, technology always had my interests. As a kid I would surf the web to play browser games, watch YouTube video, chat with 

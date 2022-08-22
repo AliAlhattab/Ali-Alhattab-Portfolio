@@ -23,7 +23,6 @@ function Header() {
         <p className="header__subtext">Full Stack</p>
         <p className="header__subtext">Web Developer</p>
       </div>
-      <div className="header__image"></div>
      </div>
       <div className="header__links">
       <a href="https://github.com/AliAlhattab" target='blank'><button className="header__button">GitHub</button></a>

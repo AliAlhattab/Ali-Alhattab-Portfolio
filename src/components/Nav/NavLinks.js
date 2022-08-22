@@ -1,6 +1,7 @@
 import React from "react";
 import "./Nav.scss";
 import { motion } from "framer-motion";
+import {Link} from 'react-scroll'
 
 function NavLinks(props) {
   const animateForm = { opacity: 0, y: -40 };
@@ -8,25 +9,34 @@ function NavLinks(props) {
 
   return (
     <ul className="nav__list">
-      <motion.li
+       <Link to="header" spy={true} smooth={true} offset={-100} duration={500} classname="nav__link"><motion.li
         initial={animateForm}
         animate={animateTo}
         transition={{ delay: 0.1 }}
         className="nav__option"
         onClick={() => props.isMobile && props.closeMenu()}
       >
-        About Me
-      </motion.li>
-      <motion.li
+        Home
+      </motion.li></Link>
+     <Link to="skills" spy={true} smooth={true} offset={-100} duration={500} classname="nav__link"><motion.li
+        initial={animateForm}
+        animate={animateTo}
+        transition={{ delay: 0.1 }}
+        className="nav__option"
+        onClick={() => props.isMobile && props.closeMenu()}
+      >
+        Skills
+      </motion.li></Link>
+      <Link to="about" spy={true} smooth={true} offset={-100} duration={500} classname="nav__link" ><motion.li
         initial={animateForm}
         animate={animateTo}
         transition={{ delay: 0.2 }}
         className="nav__option"
         onClick={() => props.isMobile && props.closeMenu()}
       >
-        Skills
-      </motion.li>
-      <motion.li
+        About Me 
+      </motion.li></Link>
+      <Link to="projects" spy={true} smooth={true} offset={-100} duration={500} classname="nav__link" ><motion.li
         initial={animateForm}
         animate={animateTo}
         transition={{ delay: 0.3 }}
@@ -34,16 +44,7 @@ function NavLinks(props) {
         onClick={() => props.isMobile && props.closeMenu()}
       >
         Projects
-      </motion.li>
-      <motion.li
-        initial={animateForm}
-        animate={animateTo}
-        transition={{ delay: 0.4 }}
-        className="nav__option"
-        onClick={() => props.isMobile && props.closeMenu()}
-      >
-        Contact Me
-      </motion.li>
+      </motion.li></Link>
     </ul>
   );
 }

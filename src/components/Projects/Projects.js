@@ -21,7 +21,7 @@ function Projects({slides}) {
     }
 
     return (
-        <section className='projects'>
+        <section id="projects" className='projects'>
             <h1 className='projects__title'>Projects</h1>
     <div className='projects__container'>
         

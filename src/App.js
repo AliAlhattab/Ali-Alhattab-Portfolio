@@ -7,13 +7,14 @@ import Projects from './components/Projects/Projects';
 import { SliderData } from './components/Projects/SliderData';
 import Skills from './components/Skills/Skills';
 
+
 function App() {
   return (
     <div className='group'>
   <Nav/>
   <Header/>
-  <About/>
   <Skills/>
+  <About/>
   <Projects slides={SliderData} />
   </div>
   );
