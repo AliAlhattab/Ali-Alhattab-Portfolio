@@ -3,9 +3,10 @@
 @use '../../styles/partials/variables' as *;
 
 .nav{
-    position: absolute;
+    position: fixed;
     width: 100%;
     background-color: black;
+    
     
     &__container{
         display: flex;
@@ -118,6 +119,12 @@
         @include tablet__labels-links-buttons;
         margin: 0 1rem;
         padding: 1rem 0 ;
+        cursor: pointer;
+
+        &:hover{
+            color: grey;
+            transition-duration: 0.5s;
+        }
         
     }
 

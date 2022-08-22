@@ -3,14 +3,13 @@ import './About.scss'
 
 function About() {
   return (
-    <section>
-        <div>
-            <h1>About me</h1>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                  esse cillum dolore eu fugiat nulla pariatur.</p>
-        </div>
+    <section className='about'>
+            <h1 className='about__title'>About me</h1>
+            <p className='about__text'>I am a Brainstation Full Stack Developer graduate that is never finished expanding their knowledge about software development.
+Starting out at a young age, technology always had my interests. As a kid I would surf the web to play browser games, watch YouTube video, chat with 
+friends on social media or do research for school. There was so much to do and knowing people made these websites themselves for us to use sparked an interest in me.
+I embarked on a journey to build and design applications that preform well and that will leave a mark on the world wide web that inspire others just like me to get
+ into web development and learn how technology works.</p>
     </section>
   )
 }

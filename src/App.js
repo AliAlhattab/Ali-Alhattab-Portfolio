@@ -2,16 +2,19 @@ import './App.scss';
 import 'animate.css';
 import Nav from './components/Nav/Nav';
 import Header from './components/Header/Header';
-import Wave from './components/Wave/Wave';
 import About from './components/About/About';
+import Projects from './components/Projects/Projects';
+import { SliderData } from './components/Projects/SliderData';
+import Skills from './components/Skills/Skills';
 
 function App() {
   return (
     <div>
   <Nav/>
   <Header/>
-  <Wave/>
   <About/>
+  <Skills/>
+  <Projects slides={SliderData} />
   </div>
   );
 }

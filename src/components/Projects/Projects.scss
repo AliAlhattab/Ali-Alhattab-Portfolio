@@ -1,0 +1,52 @@
+
+.projects{
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background-image: url(../../assets/images/cornered-stairs.svg);    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__left-arrow{
+        position: absolute;
+        top: 50%;
+        left: 0rem;
+        font-size: 2rem;
+        color: #000;
+        z-index: 10;
+        cursor: pointer;
+        user-select: none;
+        
+    }
+
+    &__right-arrow{
+        position: absolute;
+        top: 50%;
+        right: 0rem;
+        font-size: 2rem;
+        color: #000;
+        z-index: 10;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    &__image{
+        width: 100%;
+        height: 30vh;
+        border-radius: 10px;
+    }
+
+    &__slide-active{
+        opacity: 1;
+        transition-duration: 1s;
+        transform: scale(1.08);
+    }
+
+    &__slide{
+        opacity: 0;
+        transition-duration: 1s ease;
+    }
+}
