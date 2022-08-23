@@ -41,17 +41,21 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-
+       
     }
 
     &__image{
-        width: 175px;
+        width: 125px;
         margin: 1rem 2rem;
         box-shadow: 10px 5px 5px black;
 
         &:hover{
             animation-name: wiggle;
             animation-duration: 1s;
+        }
+
+        @include tablet{
+            width: 175px;
         }
     }
 
