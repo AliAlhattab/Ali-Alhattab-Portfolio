@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { SliderData } from './SliderData'
-import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa'
+import {FaArrowRight, FaArrowLeft} from 'react-icons/fa'
 import './Projects.scss'
 
 function Projects({slides}) {
@@ -25,8 +25,8 @@ function Projects({slides}) {
             <h1 className='projects__title'>Projects</h1>
     <div className='projects__container'>
         
-        <FaArrowAltCircleLeft className='projects__left-arrow' onClick={prevSlide}/>
-        <FaArrowAltCircleRight className='projects__right-arrow' onClick={nextSlide}/>
+        <FaArrowLeft className='projects__left-arrow' onClick={prevSlide}/>
+        <FaArrowRight className='projects__right-arrow' onClick={nextSlide}/>
         {SliderData.map((slide, index) => {
 
                 return (
