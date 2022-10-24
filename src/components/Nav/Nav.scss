@@ -3,9 +3,7 @@
 @use '../../styles/partials/variables' as *;
 
 .nav{
-    position: fixed;
-    width: 100%;
-    background-color: black;
+    background-image: linear-gradient(black, transparent);
     
     
     &__container{

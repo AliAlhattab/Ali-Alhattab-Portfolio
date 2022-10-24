@@ -16,7 +16,7 @@ function NavLinks(props) {
         className="nav__option"
         onClick={() => props.isMobile && props.closeMenu()}
       >
-        Home
+        LinkedIn
       </motion.li></Link>
      <Link to="skills" spy={true} smooth={true} offset={-100} duration={500} classname="nav__link"><motion.li
         initial={animateForm}
@@ -25,7 +25,7 @@ function NavLinks(props) {
         className="nav__option"
         onClick={() => props.isMobile && props.closeMenu()}
       >
-        Skills
+        GitHub
       </motion.li></Link>
       <Link to="about" spy={true} smooth={true} offset={-100} duration={500} classname="nav__link" ><motion.li
         initial={animateForm}
@@ -34,17 +34,9 @@ function NavLinks(props) {
         className="nav__option"
         onClick={() => props.isMobile && props.closeMenu()}
       >
-        About Me 
+        Resume
       </motion.li></Link>
-      <Link to="projects" spy={true} smooth={true} offset={-100} duration={500} classname="nav__link" ><motion.li
-        initial={animateForm}
-        animate={animateTo}
-        transition={{ delay: 0.3 }}
-        className="nav__option"
-        onClick={() => props.isMobile && props.closeMenu()}
-      >
-        Projects
-      </motion.li></Link>
+      
     </ul>
   );
 }

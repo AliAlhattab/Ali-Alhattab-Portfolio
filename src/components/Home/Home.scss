@@ -1,0 +1,27 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
+
+.home{
+    display: flex;
+    justify-content: center;
+    color: $primary-textColor;
+    padding-top: 15rem;
+    
+
+    @include tablet {
+        @include tablet__page-header;
+    }
+
+    &__list{
+        list-style: none;
+        display: flex;
+        padding: 0;
+
+    }
+
+    &__options{
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        margin: 2rem;
+    }
+}
