@@ -1,19 +1,19 @@
 import "./App.scss";
 import "animate.css";
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import Nav from "./components/Nav/Nav";
-import Header from "./components/Header/Header";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
-import { SliderData } from "./components/Projects/SliderData";
-import Skills from "./components/Skills/Skills";
-import Home from "./components/Home/Home";
+import Homepage from "./pages/Homepage";
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="group">
       <Nav />
-      <Home />
+      <Routes>
+      <Route path='/' element={<Homepage/>}/>
+      </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 

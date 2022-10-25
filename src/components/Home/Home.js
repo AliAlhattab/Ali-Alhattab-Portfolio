@@ -1,15 +1,16 @@
 import React from 'react'
 import './Home.scss'
+import {NavLink} from 'react-router-dom';
 
 function Home() {
   return (
     <section className='home'>
         <ul className='home__list'>   
-        <li className='home__options'>Projects</li>
-        <li className='home__options'>•</li>
-        <li className='home__options'>About</li>
-        <li className='home__options'>•</li>
-        <li className='home__options'>Contact</li>
+        <NavLink className='home__link' to='/projects'><li className='home__options'>Projects</li></NavLink>
+        <li className='home__dot'>•</li>
+        <NavLink className='home__link' to='/skills'><li className='home__options'>Skills</li></NavLink>
+        <li className='home__dot'>•</li>
+        <NavLink className='home__link' to='/about'><li className='home__options'>About</li></NavLink>
         </ul>
     </section>
   )

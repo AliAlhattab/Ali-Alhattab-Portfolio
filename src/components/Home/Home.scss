@@ -4,24 +4,61 @@
 
 .home{
     display: flex;
+
     justify-content: center;
     color: $primary-textColor;
-    padding-top: 15rem;
+    @include mobile__page-header;
+
     
 
     @include tablet {
         @include tablet__page-header;
+        padding-top: 20rem;
+       
     }
 
     &__list{
         list-style: none;
-        display: flex;
-        padding: 0;
+        padding-top: 10rem;
+        @include tablet{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0 3rem;
+
+        }
+      
 
     }
 
     &__options{
         text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         margin: 2rem;
+        transition: 0.5s;
+        cursor: pointer;
+        text-align: center;
+
+        &:hover{
+
+            font-size: 2.25rem;
+
+            @include tablet{
+                font-size: 3.5rem;
+            }
+            transition: 0.5s;
+            
+        }
+    }
+
+    &__dot{
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        margin: 2rem;
+        text-align: center;
+    }
+
+    &__link{
+        text-decoration: none;
+        color: $primary-textColor
+
     }
 }

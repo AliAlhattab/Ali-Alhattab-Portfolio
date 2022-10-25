@@ -1,7 +1,7 @@
 import React from "react";
 import "./Nav.scss";
 import { motion } from "framer-motion";
-import {Link} from 'react-scroll'
+import resume from '../../assets/pdf/Ali-Alhattab-Resume.pdf'
 
 function NavLinks(props) {
   const animateForm = { opacity: 0, y: -40 };
@@ -9,7 +9,16 @@ function NavLinks(props) {
 
   return (
     <ul className="nav__list">
-       <Link to="header" spy={true} smooth={true} offset={-100} duration={500} classname="nav__link"><motion.li
+       <a href="https://github.com/AliAlhattab" target='blank' classname="nav__link"><motion.li
+        initial={animateForm}
+        animate={animateTo}
+        transition={{ delay: 0.1 }}
+        className="nav__option"
+        onClick={() => props.isMobile && props.closeMenu()}
+      >
+        Github
+      </motion.li></a>
+      <a href="https://www.linkedin.com/in/alialhattab/" target='blank' classname="nav__link"><motion.li
         initial={animateForm}
         animate={animateTo}
         transition={{ delay: 0.1 }}
@@ -17,17 +26,8 @@ function NavLinks(props) {
         onClick={() => props.isMobile && props.closeMenu()}
       >
         LinkedIn
-      </motion.li></Link>
-     <Link to="skills" spy={true} smooth={true} offset={-100} duration={500} classname="nav__link"><motion.li
-        initial={animateForm}
-        animate={animateTo}
-        transition={{ delay: 0.1 }}
-        className="nav__option"
-        onClick={() => props.isMobile && props.closeMenu()}
-      >
-        GitHub
-      </motion.li></Link>
-      <Link to="about" spy={true} smooth={true} offset={-100} duration={500} classname="nav__link" ><motion.li
+      </motion.li></a>
+      <a href={resume} target='blank' classname="nav__link"><motion.li
         initial={animateForm}
         animate={animateTo}
         transition={{ delay: 0.2 }}
@@ -35,7 +35,7 @@ function NavLinks(props) {
         onClick={() => props.isMobile && props.closeMenu()}
       >
         Resume
-      </motion.li></Link>
+      </motion.li></a>
       
     </ul>
   );
