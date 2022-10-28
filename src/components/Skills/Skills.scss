@@ -1,0 +1,67 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
+
+@keyframes wiggle {
+    from {
+        rotate: 0deg;
+    }
+    33% {
+        rotate: 25deg;
+    }
+
+    66%{
+        rotate: -25deg;
+    }
+
+    100%{
+        rotate: 0deg;
+    }
+}
+
+.skills{
+
+    &__title{
+        @include mobile__sub-header;
+        text-align: center;
+        color: white;
+        margin: 0 0 1rem 0;
+
+        @include tablet{
+            @include tablet__sub-header;
+        }
+    }
+
+    &__container{
+      display: flex;
+      justify-content: center;
+    }
+
+    &__badges{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    &__image{
+        width: 4.69rem;
+        margin: 0.5rem 1rem;
+
+        @include tablet{
+            margin: 1rem 1.5rem;
+            width: 5.5rem;
+        }
+
+        @include desktop{
+            margin: 1rem 1.5rem;
+            width: 6.5rem;
+        }
+
+        &:hover{
+            animation-name: wiggle;
+            animation-duration: 1s;
+        }
+    }
+
+}

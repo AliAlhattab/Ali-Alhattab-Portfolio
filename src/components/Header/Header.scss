@@ -1,0 +1,95 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
+
+@keyframes wiggle {
+    from {
+        rotate: 0deg;
+    }
+    33% {
+        rotate: 25deg;
+    }
+
+    66%{
+        rotate: -25deg;
+    }
+
+    100%{
+        rotate: 0deg;
+    }
+}
+
+.header{
+width: 100%;
+padding-top: 100px;
+
+    &__container{
+        display: flex;
+    }
+
+    &__title{
+        color: white;
+        padding: 4rem 2rem 2rem 2rem;
+        width: 100%;
+
+        @include tablet{
+            padding: 4rem
+        }
+        
+    }
+
+    &__subtext{
+        @include mobile__body-large;
+        margin: 0;
+
+        @include tablet{
+            @include tablet__body-large;
+        }
+    }
+
+    &__text{
+        @include mobile__page-header;
+        width: 100px;
+
+        @include tablet{
+            @include tablet__page-header;
+        }
+    }
+
+    &__links{
+        padding: 0rem 1rem 1rem 1rem;
+
+        @include tablet {
+            padding: 0rem 2rem 2rem 2rem;
+        }
+    }
+
+    &__button{
+        margin: 0.5rem;
+        border-radius: 8px;
+        border: none;
+        padding: 0.3rem 1rem;
+        font-weight: 600;
+        box-shadow: 10px 5px 5px black;
+
+        &:hover{
+            background-color: grey;
+            transition-duration: 0.5s;
+        }
+
+        
+        @include mobile__labels-links-buttons;
+
+        @include tablet{
+            @include tablet__labels-links-buttons;
+
+            margin: 1rem;
+        border-radius: 8px;
+        border: none;
+        padding: 0.6rem 2rem;
+
+        }
+
+    }
+
+}

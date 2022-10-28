@@ -1,0 +1,62 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
+
+.about{
+    padding: 1rem;
+    color: white;
+    
+    @include tablet{
+        padding: 2rem;
+    }
+
+    @include desktop{
+        padding: 2rem 5rem;
+    }
+
+    &__title{
+        margin-bottom: 0.5rem;
+        text-align: center;
+        @include mobile__page-header;
+
+        @include tablet{
+            @include tablet__page-header;
+        }
+    }
+
+    &__text{
+        @include mobile__body-large;
+        padding-bottom: 2rem;
+        margin: 0.5 1rem;
+        text-align: center;
+
+        @include tablet{
+            @include tablet__body-large;
+            margin: 0 8rem;
+        }
+
+        @include desktop{
+            @include desktop__body-large;
+            margin: 0 20rem;
+        }
+    }
+
+    &__image-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+        @include tablet{
+            margin: 2rem 0;
+        }
+    }
+
+    &__image{
+        border-radius: 50%;
+        width: 25%;
+
+        @include tablet{
+            width: 175px;
+        }
+    }
+}

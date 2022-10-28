@@ -1,0 +1,149 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
+
+
+.nav{
+    background-image: linear-gradient(black, transparent);
+    
+    
+    &__container{
+        display: flex;
+        align-items: center;
+    }
+
+    &__image{
+        background-image: url('../../assets/images/pfp.PNG');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+        margin: 0rem 0.5rem 0 0.5rem;
+        border: solid $primary-textColor 1px;
+
+        @include tablet{
+            margin: 0rem 1rem 0 1rem;
+            width: 2.75rem;
+            height: 2.75rem;
+        }
+
+        @include desktop {
+            margin: 0rem 1rem 0 2rem;
+        }
+        
+    }
+
+    &__group{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+
+    }
+
+    &__title{
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__name{
+        margin-right: 0.3rem;
+        @include mobile__sub-header;
+        color: $primary-textColor;
+
+        @include tablet{
+            @include tablet__sub-header;
+            margin-right: 0.5rem;
+        }
+       
+    }
+
+    &__subtitle{
+        @include mobile__table-header;
+        font-weight: 300;
+        color: $primary-textColor;
+
+        @include tablet{
+            @include tablet__table-header;
+        }
+    }
+
+    &__link{
+        text-decoration: blue;
+    }
+    
+    &__menu{
+        width: 1.5rem;
+        margin-right: 0.5rem;
+        filter: invert(1);
+        cursor: pointer;
+
+       @include tablet{
+        display: none;
+       }
+        
+        
+    }
+
+    &__list{
+        list-style: none;
+        color: $primary-textColor;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0px;
+        top:68px;
+        width: 100%;
+        background-image: linear-gradient(transparent,rgba(0, 0, 0, 0.4));
+        margin: 0;
+        text-decoration: none;
+        
+
+        @include tablet {
+            flex-direction: row;
+            top: auto;
+            right: auto;
+            position: relative;
+            background-color: transparent;
+            background-image: none;
+            margin: 0rem 0.5rem 0 0;
+        }
+
+        @include desktop {
+            margin: 0rem 2rem 0 0;
+        }
+    }
+
+    &__option{
+        @include tablet__labels-links-buttons;
+        margin: 0 1rem;
+        padding: 1rem 0 ;
+        cursor: pointer;
+        color: white;
+        text-decoration: blue;
+
+
+        &:hover{
+            color: grey;
+            transition-duration: 0.5s;
+        }
+        
+    }
+
+    &__tablet{
+        display: none;
+        
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    &__mobile{
+        
+        @include tablet{
+            display: none;
+        }
+    }
+}
