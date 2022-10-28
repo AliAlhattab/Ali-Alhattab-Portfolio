@@ -10,7 +10,7 @@ function Home() {
         <li className='home__dot'>•</li>
         <NavLink className='home__link' to='/about'><li className='home__options'>About</li></NavLink>
         <li className='home__dot'>•</li>
-        <NavLink className='home__link' to='/skills'><li className='home__options'>Contact</li></NavLink>
+        <NavLink className='home__link' to='/contact'><li className='home__options'>Contact</li></NavLink>
         </ul>
     </section>
   )

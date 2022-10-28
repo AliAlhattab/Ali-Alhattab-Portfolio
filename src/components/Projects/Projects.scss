@@ -5,19 +5,28 @@
 
 .projects{
     color: $primary-textColor;
-    @include mobile__body-medium;
+    @include mobile__body-small;
     text-align: center;
+
+    @include tablet{
+        @include tablet__body-medium;
+    }
+
+    @include desktop{
+        @include desktop__body-large;
+    }
 
 
     &__group1{
-        display: flex;
-        justify-content: center;
         background-color: $video-background;
         margin: 0rem 1rem 1rem 1rem;
         padding-top: 1rem;
         border-radius: 20px;
         box-sizing: border-box;
         padding-left: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
         @include tablet {
             display: flex;
@@ -34,14 +43,15 @@
     }
 
     &__group2{
-        display: flex;
-        justify-content: center;
         background-color: $video-background;
         margin: 0rem 1rem 1rem 1rem;
         padding-top: 1rem;
         border-radius: 20px;
         box-sizing: border-box;
         padding-left: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
         @include tablet {
             display: flex;
@@ -59,12 +69,10 @@
     }
 
     &__video{
-        display: flex;
-        justify-content: center;
         width: 40%;
-
+        order: 1;
         @include tablet{
-
+            order: 0;
             width: 24%;
             margin: 0 1rem;
         }
@@ -76,7 +84,12 @@
     }
 
     &__text{
+        order: 2;
         margin: 1rem 1.5rem 1rem 1.5rem;
+
+        @include tablet{
+            order: 0;
+        }
 
 
     }
