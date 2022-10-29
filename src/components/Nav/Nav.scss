@@ -71,7 +71,8 @@
     }
 
     &__link{
-        text-decoration: blue;
+        text-decoration: none;
+        color: $primary-textColor;
     }
     
     &__menu{

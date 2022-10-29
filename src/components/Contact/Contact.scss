@@ -9,8 +9,16 @@
     @include mobile__body-large;
     color: $primary-textColor;
 
+    @include tablet{
+        @include tablet__body-large;
+    }
+
     &__container{
         margin-top: 3rem;
+
+        @include tablet{
+            margin-top: 10rem;
+        }
     }
     
     &__link{
