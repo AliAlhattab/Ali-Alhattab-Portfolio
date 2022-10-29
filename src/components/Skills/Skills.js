@@ -19,7 +19,7 @@ import heroku from '../../assets/skills/heroku.svg'
 function Skills() {
   return (
     <section id="skills" className='skills'>
-      <h1 className='skills__title'>Skills</h1>
+      <h1 className='skills__title'>Tech Stack:</h1>
       <div className='skills__container'>
         <div className='skills__badges'>
       <img className='skills__image' src={html}/>

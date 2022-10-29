@@ -22,13 +22,13 @@
 .skills{
 
     &__title{
-        @include mobile__page-header;
-        padding-top: 1rem;
+        @include mobile__sub-header;
         text-align: center;
         color: white;
+        margin: 0 0 1rem 0;
 
         @include tablet{
-            @include tablet__page-header;
+            @include tablet__sub-header;
         }
     }
 
@@ -45,9 +45,18 @@
     }
 
     &__image{
-        width: 125px;
-        margin: 1rem 2rem;
-        box-shadow: 10px 5px 5px black;
+        width: 4.69rem;
+        margin: 0.5rem 1rem;
+
+        @include tablet{
+            margin: 1rem 1.5rem;
+            width: 5.5rem;
+        }
+
+        @include desktop{
+            margin: 1rem 1.5rem;
+            width: 6.5rem;
+        }
 
         &:hover{
             animation-name: wiggle;

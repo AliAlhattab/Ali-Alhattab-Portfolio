@@ -1,7 +1,8 @@
 import React from "react";
 import "./Nav.scss";
 import { motion } from "framer-motion";
-import {Link} from 'react-scroll'
+import resume from '../../assets/pdf/Ali-Alhattab-Resume.pdf'
+import {NavLink} from 'react-router-dom';
 
 function NavLinks(props) {
   const animateForm = { opacity: 0, y: -40 };
@@ -9,7 +10,7 @@ function NavLinks(props) {
 
   return (
     <ul className="nav__list">
-       <Link to="header" spy={true} smooth={true} offset={-100} duration={500} classname="nav__link"><motion.li
+        <NavLink to='/' classname="nav__link"><motion.li
         initial={animateForm}
         animate={animateTo}
         transition={{ delay: 0.1 }}
@@ -17,34 +18,35 @@ function NavLinks(props) {
         onClick={() => props.isMobile && props.closeMenu()}
       >
         Home
-      </motion.li></Link>
-     <Link to="skills" spy={true} smooth={true} offset={-100} duration={500} classname="nav__link"><motion.li
+      </motion.li></NavLink>
+       <a href="https://github.com/AliAlhattab" target='blank' classname="nav__link"><motion.li
         initial={animateForm}
         animate={animateTo}
         transition={{ delay: 0.1 }}
         className="nav__option"
         onClick={() => props.isMobile && props.closeMenu()}
       >
-        Skills
-      </motion.li></Link>
-      <Link to="about" spy={true} smooth={true} offset={-100} duration={500} classname="nav__link" ><motion.li
+        Github
+      </motion.li></a>
+      <a href="https://www.linkedin.com/in/alialhattab/" target='blank' classname="nav__link"><motion.li
+        initial={animateForm}
+        animate={animateTo}
+        transition={{ delay: 0.1 }}
+        className="nav__option"
+        onClick={() => props.isMobile && props.closeMenu()}
+      >
+        LinkedIn
+      </motion.li></a>
+      <a href={resume} target='blank' classname="nav__link"><motion.li
         initial={animateForm}
         animate={animateTo}
         transition={{ delay: 0.2 }}
         className="nav__option"
         onClick={() => props.isMobile && props.closeMenu()}
       >
-        About Me 
-      </motion.li></Link>
-      <Link to="projects" spy={true} smooth={true} offset={-100} duration={500} classname="nav__link" ><motion.li
-        initial={animateForm}
-        animate={animateTo}
-        transition={{ delay: 0.3 }}
-        className="nav__option"
-        onClick={() => props.isMobile && props.closeMenu()}
-      >
-        Projects
-      </motion.li></Link>
+        Resume
+      </motion.li></a>
+      
     </ul>
   );
 }

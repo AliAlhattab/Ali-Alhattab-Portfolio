@@ -15,7 +15,7 @@
     }
 
     &__title{
-        
+        margin-bottom: 0.5rem;
         text-align: center;
         @include mobile__page-header;
 
@@ -25,18 +25,38 @@
     }
 
     &__text{
-        @include mobile__body-medium;
+        @include mobile__body-large;
         padding-bottom: 2rem;
-        margin: 0 1rem;
+        margin: 0.5 1rem;
+        text-align: center;
 
         @include tablet{
-            @include tablet__body-medium;
-            margin: 0 5rem;
+            @include tablet__body-large;
+            margin: 0 8rem;
         }
 
         @include desktop{
-            @include tablet__body-large;
-            margin: 0 10rem;
+            @include desktop__body-large;
+            margin: 0 20rem;
+        }
+    }
+
+    &__image-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+        @include tablet{
+            margin: 2rem 0;
+        }
+    }
+
+    &__image{
+        border-radius: 50%;
+        width: 25%;
+
+        @include tablet{
+            width: 175px;
         }
     }
 }

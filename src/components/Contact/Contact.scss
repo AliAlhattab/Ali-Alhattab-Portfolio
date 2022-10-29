@@ -1,0 +1,52 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mobile__body-large;
+    color: $primary-textColor;
+
+    @include tablet{
+        @include tablet__body-large;
+    }
+
+    &__container{
+        margin-top: 3rem;
+
+        @include tablet{
+            margin-top: 10rem;
+        }
+    }
+    
+    &__link{
+        color: $primary-textColor;
+        text-decoration: none;
+    }
+
+    &__title{
+        text-align: center;
+    }
+
+    &__group{
+        display: flex;
+    }
+
+    &__image{
+        width: 3.5rem;
+        margin: 0 1rem 1rem 0;
+    }
+
+    &__image2{
+        filter: invert(1);
+        width: 3.5rem;
+        margin: 0 1rem 1rem 0;
+    }
+
+    &__text{
+        margin-left: 1rem;
+    }
+
+}

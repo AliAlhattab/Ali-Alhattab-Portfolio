@@ -1,6 +1,20 @@
+@use './styles/partials/mixins' as *;
+@use './styles/partials/fonts' as *;
+@use './styles/partials/variables' as *;
+
+body{
+        background-position: 75% center;
+        background-image: url('./assets/images/background.webp');
+        background-repeat: no-repeat;
+
+        
+        @include tablet{
+                height: 100vh;
+        }
+
+
+}
+
 .group{
- background-image: url(./assets/images/liquid-cheese.svg);
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
+
 }

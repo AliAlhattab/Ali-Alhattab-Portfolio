@@ -2,94 +2,96 @@
 @use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/variables' as *;
 
+
 .projects{
-    color: white;
-    padding-bottom: 2rem;
+    color: $primary-textColor;
+    @include mobile__body-small;
+    text-align: center;
 
-    &__title{
-        @include mobile__page-header;
+    @include tablet{
+        @include tablet__body-medium;
+    }
+
+    @include desktop{
+        @include desktop__body-large;
+    }
+
+
+    &__group1{
+        background-color: $video-background;
+        margin: 0rem 1rem 1rem 1rem;
         padding-top: 1rem;
-        text-align: center;
-
-        @include tablet{
-            @include tablet__page-header;
-        }
-    }
-
-    &__container{
-        padding: 2rem;
-        position: relative;
+        border-radius: 20px;
+        box-sizing: border-box;
+        padding-left: 1rem;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        align-items: center;   
-    }
 
-    &__left-arrow{
-        position: absolute;
-        top: 50%;
-        left: 0.3rem;
-        font-size: 2rem;
-        color: rgb(49, 49, 49);
-        z-index: 10;
-        cursor: pointer;
-        user-select: none;
+        @include tablet {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            padding: 1rem 0;
 
-        @include tablet{
-            left: 0.5rem;
-            font-size: 3rem;
         }
 
         @include desktop{
-            left: 2rem;
-            font-size: 4rem;
+            margin-right: 30%;
         }
-        
+ 
     }
 
-    &__right-arrow{
-        position: absolute;
-        top: 50%;
-        right: 0.3rem;
-        font-size: 2rem;
-        color: rgb(49, 49, 49);
-        z-index: 10;
-        cursor: pointer;
-        user-select: none;
+    &__group2{
+        background-color: $video-background;
+        margin: 0rem 1rem 1rem 1rem;
+        padding-top: 1rem;
+        border-radius: 20px;
+        box-sizing: border-box;
+        padding-left: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
-        @include tablet{
-            right: 0.5rem;
-            font-size: 3rem;
-        }
+        @include tablet {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            padding: 1rem 0;
 
-        @include desktop{
-            right: 2rem;
-            font-size: 4rem;
-        }
-    }
-
-    &__image{
-        width: 100%;
-        height: 30vh;
-        border-radius: 10px;
-        box-shadow: 10px 5px 5px black;
-
-        @include tablet{
-            height: 45vh;
         }
 
         @include desktop{
-            height: 60vh;
+            margin-left: 30%;
+            margin-right: 2rem;
         }
+ 
     }
 
-    &__slide-active{
-        opacity: 1;
-        transition-duration: 1s;
-        transform: scale(1.08);
+    &__video{
+        width: 40%;
+        order: 1;
+        @include tablet{
+            order: 0;
+            width: 24%;
+            margin: 0 1rem;
+        }
+
+        @include desktop{
+            width: 23%;
+        }
+
     }
 
-    &__slide{
-        opacity: 0;
-        transition-duration: 1s ease;
+    &__text{
+        order: 2;
+        margin: 1rem 1.5rem 1rem 1.5rem;
+
+        @include tablet{
+            order: 0;
+        }
+
+
     }
+
 }
