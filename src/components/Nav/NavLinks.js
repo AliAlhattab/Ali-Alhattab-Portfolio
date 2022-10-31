@@ -2,7 +2,6 @@ import React from "react";
 import "./Nav.scss";
 import { motion } from "framer-motion";
 import resume from '../../assets/pdf/Ali-Alhattab-Resume.pdf'
-import {NavLink} from 'react-router-dom';
 
 function NavLinks(props) {
   const animateForm = { opacity: 0, y: -40 };
