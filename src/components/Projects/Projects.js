@@ -22,7 +22,7 @@ function Projects() {
         <div className='projects__group1'>
         <video className='projects__video' controls src={brainflix} type='video/mp4'/>
         <p className='projects__text'>This project aims to imitate a video streaming application where users can comment, play, and upload videos.
-        the back-end uses JSON to store the comments, videos and newly uploaded videos.</p>
+        The back-end uses JSON to store the comments, videos and newly uploaded videos.</p>
         </div>
         <div className='projects__group2'>
             <p className='projects__text'>This project was a vanilla Javascript project that utilized DOM manipulation. In this project a band "hired" me to make them a website

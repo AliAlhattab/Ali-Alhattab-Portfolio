@@ -10,15 +10,6 @@ function NavLinks(props) {
 
   return (
     <ul className="nav__list">
-        <NavLink to='/' classname="nav__link"><motion.li
-        initial={animateForm}
-        animate={animateTo}
-        transition={{ delay: 0.1 }}
-        className="nav__option"
-        onClick={() => props.isMobile && props.closeMenu()}
-      >
-        Home
-      </motion.li></NavLink>
        <a href="https://github.com/AliAlhattab" target='blank' classname="nav__link"><motion.li
         initial={animateForm}
         animate={animateTo}
