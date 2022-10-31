@@ -8,8 +8,8 @@ function Projects() {
     <section className='projects'>
         <div className='projects__group1'>
         <video className='projects__video' controls src='https://d3enjmme2vbs8a.cloudfront.net/officequiz.mp4' type='video/mp4'/>
-        <p className='projects__text'>This is a full-stack quiz game based on the show The Office. The application stores players and their scores in MySQL database 
-        and then displays their scores from highest to lowest in the leadersboard page to allow for a more competitive feeling to the quiz. </p>
+        <p className='projects__text'>This is a full-stack quiz game based on the show The Office. The application stores the player's name and score in MySQL database and 
+        then display them from highest to lowest on the leaderboard page to allow for a more competitive feeling to the quiz. </p>
         </div>
         <div className='projects__group2'>
             <p className='projects__text'>This project is a web developer freelancing website that allows you to find or look for freelance web developer work. 
