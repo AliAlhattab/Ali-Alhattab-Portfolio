@@ -50,7 +50,7 @@
 
         @include tablet{
             margin: 1rem 1.5rem;
-            width: 5.5rem;
+            width: 4.5rem;
         }
 
         @include desktop{
@@ -63,9 +63,6 @@
             animation-duration: 1s;
         }
 
-        @include tablet{
-            width: 175px;
-        }
     }
 
 }

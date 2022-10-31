@@ -1,10 +1,14 @@
-import React from 'react'
-import Projects from '../components/Projects/Projects'
+import React from "react";
+import Back from "../components/Back/Back";
+import Projects from "../components/Projects/Projects";
 
 function Projectspage() {
   return (
-   <Projects/>
-  )
+    <section>
+      <Back />
+      <Projects />
+    </section>
+  );
 }
 
-export default Projectspage
+export default Projectspage;

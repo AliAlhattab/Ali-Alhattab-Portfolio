@@ -1,10 +1,14 @@
-import React from 'react'
-import About from '../components/About/About'
+import React from "react";
+import About from "../components/About/About";
+import Back from "../components/Back/Back";
 
 function Aboutpage() {
   return (
-    <About/>
-  )
+    <section>
+      <Back />
+      <About />
+    </section>
+  );
 }
 
-export default Aboutpage
+export default Aboutpage;

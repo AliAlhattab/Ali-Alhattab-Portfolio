@@ -1,0 +1,23 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
+
+.back{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2rem;
+    &__text{
+        margin: 0.5rem;
+        @include mobile__body-large;
+
+        @include tablet{
+            @include tablet__sub-header
+        }
+        
+    }
+
+    &__link{
+        color: $primary-textColor;
+        text-decoration: none;
+    }
+}
